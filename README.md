@@ -14,15 +14,11 @@ sensor-lm, grep
 Run the script with root privilege using crontab
 
 ```crontab
-
 1 * * * * /bin/bash /root/main.bash
-
 ```
 
 If it does not work, try make it executable.
 
 ```bash
-
 chmod +x main.bash
-
 ```

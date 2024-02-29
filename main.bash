@@ -28,7 +28,7 @@ fi
 if [[ $CPU_temps -ge 70 ]]
 then
     echo "SEVER OVERHEATING, $CPU_temps"
-    echo "CPU SEVER OVERHEATING, $CPU_temps" > /dev/kmsg
+    echo "CPU SEVER OVERHEATING, $CPU_temps" > /dev/kmsg # Write the evidence to kernel mesage, check the measage using 'dmesg' command
     echo "Tempeture checker force poweroff" > /dev/kmsg
     poweroff
 fi
@@ -38,7 +38,7 @@ fi
 if [[ $CPU_temps -ge 60 ]]
 then
     echo "Overheating, $CPU_temps"
-    echo "CPU Overheating, $CPU_temps" > /dev/kmsg
+    echo "CPU Overheating, $CPU_temps" > /dev/kmsg # Write the evidence to kernel mesage
     echo "Tempeture checker force shutdown" > /dev/kmsg
     shutdown
 fi
@@ -48,7 +48,7 @@ fi
 if [[ $CPU_temps -ge 50 ]]
 then
     echo "Warm, $CPU_temps"
-    echo "CPU Warm, $CPU_temps" > /dev/kmsg
+    echo "CPU Warm, $CPU_temps" > /dev/kmsg # Write the evidence to kernel mesage
 fi
 
 # Delightful
